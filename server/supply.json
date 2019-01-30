@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "item": "Törülközők",
+        "pieces": "95",
+        "administrator": "Dr. Kiss Elemér",
+        "supplyDate": "2018.10.22"
+    },
+    {
+        "id": 2,
+        "item": "Lepedők",
+        "pieces": "50",
+        "administrator": "Dr.Kovács Tamara",
+        "supplyDate": "2019.01.12"
+    },
+    {
+        "id": 3,
+        "item": "Függönyök",
+        "pieces": "155",
+        "administrator": "Dr. Péterfi János",
+        "supplyDate": "2018.10.08"
+    }
+]

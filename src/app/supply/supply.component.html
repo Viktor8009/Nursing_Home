@@ -1,0 +1,39 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2>Aktív beszerzések</h2>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let item of supplyKeys">{{ item.value }}</th>
+                <th>Kezelés</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td *ngFor="let item of supplyKeys">
+                        <input type="text" class="form-control" [(ngModel)]="newItem[item.key]">
+                    </td>
+                    <td>
+                        <button (click)="createNewItem()" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngFor="let supply of supplies">
+                    <td *ngFor="let item of supplyKeys">
+                        <input type="text" class="form-control" [(ngModel)]="supply[item.key]">
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button (click)="editSupply(supply)" class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </button>
+                            <button (click)="deleteSupply(supply)" class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

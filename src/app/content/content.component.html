@@ -1,0 +1,52 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div *ngIf="currentLink =='/'">
+    <h1 class="page-header">Kezelőfelület</h1>
+    <div class="row placeholders">
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <div width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <span class="glyphicon glyphicon-user"></span>
+        </div>
+        <h4>{{usersCount}}</h4>
+        <span class="text-muted">Lakó</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <div class="dashboardIcon" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+          <span class="glyphicon glyphicon-home"></span>
+        </div>
+        <h4>{{roomsCount}}</h4>
+        <span class="text-muted">szoba</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <div width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+          <span class="glyphicon glyphicon-user"></span>
+        </div>
+        <h4>{{staffCount}}</h4>
+        <span class="text-muted">alkalmazott</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <div width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+          <span class="glyphicon glyphicon-stats"></span>
+        </div>
+        <h4>{{activeMembers}} || {{inactiveMembers}}</h4>
+        <span class="text-muted">aktív || inaktív</span>
+      </div>
+    </div>
+
+    <h2 class="sub-header">Lakók nyilvántartása</h2>
+    <div class="table-responsive">
+      <app-user-table></app-user-table>
+    </div>
+  </div>
+  <!-- Residents -->
+  <div *ngIf="currentLink == '/user-manager'">
+    <app-user-manager (newUser)="onNewUser($event)"></app-user-manager>
+  </div>
+  <!-- Analytics -->
+  <div *ngIf="currentLink == '/Analytics'">
+    Analytics aloldala.....
+  </div>
+   <!-- Exports -->
+   <div *ngIf="currentLink == '/Export'">
+      Export aloldal....
+  </div>
+</div>

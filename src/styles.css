@@ -1,0 +1,9 @@
+thead
+{
+    background-color: rgb(159, 182, 240);
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: rgb(183, 235, 170);
+}

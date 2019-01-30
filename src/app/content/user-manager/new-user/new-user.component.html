@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+      <form #form="ngForm" (ngSubmit)="submitForm(form)" novalidate>
+        <div class="form-group" [ngClass]="{'has-error': checkErrors(form,form.controls.lastName)}">
+          <label for="Vezetéknév">Vezetéknév</label>
+          <span  id="helpBlock2" class="help-block" *ngIf="checkErrors(form,form.controls.lastName)">A 'vezetéknév' mező nem lehet üres!</span>
+          <input type="text" class="form-control" name="lastName" placeholder="Vezetéknév" 
+                 required ngModel>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': checkErrors(form,form.controls.firstName)}">
+          <label for="Keresztnév">Keresztnév</label>
+          <span id="helpBlock2" class="help-block" *ngIf="checkErrors(form,form.controls.firstName)">A 'keresztnév' mező nem lehet üres!</span>
+          <input type="text" class="form-control" name="firstName" placeholder="Keresztnév" 
+                 required ngModel>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': checkErrors(form,form.controls.email)}">
+          <label for="Email">E-mail</label>
+          <span  id="helpBlock2" class="help-block" *ngIf="checkErrors(form,form.controls.email)">Az email cím nem megfelelő!</span>
+          <input type="email" class="form-control" name="email" placeholder="Email" 
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                  required ngModel>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': checkErrors(form,form.controls.phone)}">
+          <label for="Telephone">Telefon</label>
+          <span  id="helpBlock2" class="help-block" *ngIf="checkErrors(form,form.controls.phone)">A 'telefon' mező nem lehet üres!</span>
+          <input type="text" class="form-control" name="phone" placeholder="Telefon" 
+                 required ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary">Lakó mentés</button>
+    </form>
+  </div>
+</div>

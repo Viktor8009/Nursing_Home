@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Napfény",
+        "size": "20",
+        "slot": "3",
+        "floor": "1",
+        "active": false
+    },
+    {
+        "id": 2,
+        "name": "Vidám",
+        "size": "50",
+        "slot": "5",
+        "floor": "2",
+        "active": "true"
+    },
+    {
+        "id": 3,
+        "name": "Árnyékos",
+        "size": "15",
+        "slot": "2",
+        "floor": "1",
+        "active": "true"
+    },
+    {
+        "id": 4,
+        "name": "Úri",
+        "size": "75",
+        "slot": "1",
+        "floor": "3",
+        "active": false
+    }
+]

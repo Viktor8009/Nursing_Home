@@ -1,0 +1,40 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2>Szobák kezelése</h2>
+    <hr>
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th *ngFor="let settings of keys">{{settings.label}}</th>
+            <th>Kezelés</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td *ngFor="let settings of keys">
+              <input type="text" class="form-control" [(ngModel)]="newRoom[settings.key]">
+            </td> 
+            <td>
+              <button (click)="createRoom()" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+            </td>
+          </tr>
+          <tr *ngFor="let room of rooms">
+            <td *ngFor="let settings of keys">
+              <input type="text" class="form-control" [(ngModel)]="room[settings.key]">
+            </td>
+            <td>
+              <div class="btn-group">
+                 <button (click) = "edit(room)"class="btn btn-info btn-sm">
+                     <span class="glyphicon glyphicon-refresh"></span>
+                 </button>
+                 <button (click) = "delete(room)" class="btn btn-danger btn-sm">
+                     <span class="glyphicon glyphicon-remove"></span>
+                 </button>
+             </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+</div>
+  

@@ -1,0 +1,29 @@
+[
+    {
+            "id":1,
+            "lastName":"Nagy",
+            "firstName":"Zoltán",
+            "email":"nz@gmail.com",
+            "phone":"+36201879543",
+            "relatives":"Kiss Béla",
+            "active":true
+    },
+    {
+            "id":2,
+            "lastName":"Kiss",
+            "firstName":"Tivadar",
+            "email":"kt@gmail.com",
+            "phone":"+36304392587",
+            "relatives":"Balogh Tamás",
+            "active":false
+    },
+    {
+            "id":3,
+            "lastName":"Piros",
+            "firstName":"Rozália",
+            "email":"pr@gmail.com",
+            "phone":"+36309783495",
+            "relatives":"Horváth László",
+            "active":true
+    }
+]

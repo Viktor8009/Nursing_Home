@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <form (ngSubmit)="editForm()" novalidate>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Vezetéknév</label>
+                <input type="text" class="form-control" name="lastName" placeholder="Vezetéknév"
+                  required [(ngModel)]="editedUser.lastName">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Keresztnév</label>
+                <input type="text" class="form-control" name="firstName" placeholder="Keresztnév"
+                  required [(ngModel)]="editedUser.firstName">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                  required [(ngModel)]="editedUser.email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Telefon</label>
+                <input type="text" class="form-control" name="phone" placeholder="Telefon"
+                  required [(ngModel)]="editedUser.phone">
+            </div>
+            <button type="submit" class="btn btn-primary">Módosítás</button>
+        </form>
+    </div>
+</div>
